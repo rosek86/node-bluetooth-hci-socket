@@ -16,6 +16,15 @@ interface Device {
     deviceAddress: number | null;
 }
 
+interface BindParams {
+    usb: {
+        vid: number;
+        pid: number;
+        bus?: number;
+        address?: number;
+    }
+}
+
 declare class BluetoothHciSocket extends NodeJS.EventEmitter {
     getDeviceList(): Device[];
     isDevUp(): boolean;
@@ -24,8 +33,8 @@ declare class BluetoothHciSocket extends NodeJS.EventEmitter {
     stop(): void;
     reset(): void;
 
-    bindRaw(devId: number): number;
-    bindUser(devId: number): number;
+    bindRaw(devId: number, params?: BindParams): number;
+    bindUser(devId: number, params?: BindParams): number;
     bindControl(): number;
 
     setFilter(filter: Buffer): void;
