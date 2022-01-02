@@ -2,6 +2,7 @@
 // By: Yusuf Can INCE <ycanince@gmail.com>
 
 /// <reference types="node" />
+import { EventEmitter } from 'events';
 
 interface Device {
     devId: number | null;
@@ -25,7 +26,7 @@ interface BindParams {
     }
 }
 
-declare class BluetoothHciSocket extends NodeJS.EventEmitter {
+declare class BluetoothHciSocket extends EventEmitter {
     getDeviceList(): Device[];
     isDevUp(): boolean;
 
