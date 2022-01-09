@@ -24,18 +24,20 @@
     "linux",
     "android",
     "freebsd",
-    "win32"
+    "win32",
+    "darwin"
   ],
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.5",
-    "debug": "^4.3.2",
+    "@mapbox/node-pre-gyp": "^1.0.8",
+    "debug": "^4.3.3",
     "nan": "^2.15.0"
   },
   "optionalDependencies": {
-    "usb": "^1.7.2"
+    "usb": "^1.9.2"
   },
   "devDependencies": {
-    "jshint": "^2.13.1"
+    "@types/node": "^10.17.60",
+    "jshint": "^2.13.3"
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",

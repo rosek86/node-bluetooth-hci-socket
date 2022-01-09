@@ -26,6 +26,10 @@ interface BindParams {
     }
 }
 
+declare namespace BluetoothHciSocket {
+    function bluetoothHciSocketFactory(type: 'native' | 'usb'): typeof BluetoothHciSocket;
+}
+
 declare class BluetoothHciSocket extends EventEmitter {
     getDeviceList(): Device[];
     isDevUp(): boolean;
