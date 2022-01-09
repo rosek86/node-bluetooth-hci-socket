@@ -83,7 +83,7 @@ npm install @abandonware/bluetooth-hci-socket
 ## Usage
 
 ```javascript
-var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
+const BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
 ```
 
 ### Actions
@@ -91,13 +91,13 @@ var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
 #### Create
 
 ```javascript
-var bluetoothHciSocket = new BluetoothHciSocket();
+const bluetoothHciSocket = new BluetoothHciSocket();
 ```
 
 #### Set Filter
 
 ```javascript
-var filter = new Buffer(14);
+const filter = Buffer.alloc(14);
 
 // ...
 
@@ -133,7 +133,7 @@ bluetoothHciSocket.bindControl();
 Query the device state.
 
 ```
-var isDevUp = bluetoothHciSocket.isDevUp(); // returns: true or false
+const isDevUp = bluetoothHciSocket.isDevUp(); // returns: true or false
 ```
 
 __Note:__ must be called after ```bindRaw```.
@@ -155,7 +155,7 @@ __Note:__ must be called after ```bindRaw``` or ```bindControl```.
 #### Write
 
 ```javascript
-var data = new Buffer(/* ... */);
+const data = Buffer.from(/* ... */);
 
 // ...
 
