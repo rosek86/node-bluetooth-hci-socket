@@ -33,7 +33,7 @@
     "nan": "^2.15.0"
   },
   "optionalDependencies": {
-    "usb": "^1.9.2"
+    "usb": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^10.17.60",
